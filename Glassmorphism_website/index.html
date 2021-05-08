@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="card">
+            <form action="" name="calculator" class="calculator">
+                <input type="text" readonly class="value" name="result">
+                
+                    <span class="num clear" onclick="document.calculator.result.value=''">C</span> 
+                    <span class="num" onclick="document.calculator.result.value+='/'">/</span> 
+                    <span class="num" onclick="document.calculator.result.value+='*'">*</span> 
+                    <span class="num" onclick="document.calculator.result.value+='7'">7</span> 
+                    <span class="num" onclick="document.calculator.result.value+='8'">8</span> 
+                    <span class="num" onclick="document.calculator.result.value+='9'">9</span> 
+                    <span class="num" onclick="document.calculator.result.value+='-'">-</span> 
+                    <span class="num" onclick="document.calculator.result.value+='4'">4</span> 
+                    <span class="num" onclick="document.calculator.result.value+='5'">5</span> 
+                    <span class="num" onclick="document.calculator.result.value+='6'">6</span> 
+                    <span class="num plus" onclick="document.calculator.result.value+='+'">+</span> 
+                    <span class="num" onclick="document.calculator.result.value+='1'">1</span> 
+                    <span class="num" onclick="document.calculator.result.value+='2'">2</span> 
+                    <span class="num" onclick="document.calculator.result.value+='3'">3</span> 
+                    <span class="num" onclick="document.calculator.result.value+='0'">0</span> 
+                    <span class="num" onclick="document.calculator.result.value+='00'">00</span> 
+                    <span class="num" onclick="document.calculator.result.value+='.'">.</span> 
+                    <span class="num equal" onclick="document.calculator.result.value=eval(document.calculator.result.value)">=</span> 
+                
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="vannila-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".card"));
+    </script>
+</body>
+</html>
